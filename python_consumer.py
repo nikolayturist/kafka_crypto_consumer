@@ -82,6 +82,4 @@ if __name__ == "__main__":
     print(config)
 
     message_consumer = CryptoConsumer(config)
-    result = message_consumer.consume_messages()
-
-    print(result)
+    message_consumer.consume_messages()
