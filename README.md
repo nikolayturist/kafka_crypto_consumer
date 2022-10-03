@@ -1,21 +1,23 @@
-./kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 2 --partitions 3 --topic crypto_order
+To run consumer for crypto data do following:
 
-sudo apt install virtualenv
+1. Clone git repository :
+```
+	git clone https://github.com/nikolayturist/kafka_crypto_consumer.git
+```
 
-virtualenv --version
+2. Deploy lab3_kafka_publisher.xml NIFI template to NIFI.
 
-cd ~
+3. Launch NIFI flow.
 
-mkdir kafka_lab3
-cd kafka_lab3
+2. Change directory to repository
 
-virtualenv -p /usr/bin/python3 crypto
+3. Add execution permissions to environment_create.sh
 
-source crypto/bin/activate
+```
+	chmod +x environment_create.sh
+```
 
-python --version
-
-pip install kafka-python
-pip install gcloud
-pip install google-cloud-storage
-pip install google-api-python-client
+4. Execute environment_create.sh. It will create 'crypto_topic' kafka topic, venv, install needed packages and launch 'kafka_consumer.py'
+```
+	./environment_create.sh
+```
