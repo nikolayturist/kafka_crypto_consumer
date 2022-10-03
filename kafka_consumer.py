@@ -81,4 +81,5 @@ if __name__ == '__main__':
     else:
         crypto_bucket = storage_client.get_bucket(BUCKET_NAME)
 
-    consume_messages(crypto_bucket
+    consume_messages(crypto_bucket)
+
