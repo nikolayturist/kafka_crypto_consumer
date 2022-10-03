@@ -12,11 +12,6 @@ echo "-----------------------------------------------------------"
 
 sudo apt install virtualenv
 
-cd ~
-
-mkdir kafka_consumer
-cd kafka_consumer
-
 virtualenv -p /usr/bin/python3 crypto
 source crypto/bin/activate
 
