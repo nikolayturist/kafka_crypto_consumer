@@ -3,8 +3,7 @@
 echo "-----------------------------------------------------------"
 echo "Create topic crypto_order"
 echo "-----------------------------------------------------------"
-cd /usr/lib/kafka/bin/
-./kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 2 --partitions 3 --topic crypto_topic
+/usr/lib/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 2 --partitions 3 --topic crypto_topic
 
 echo "-----------------------------------------------------------"
 echo "Configure consumer"
