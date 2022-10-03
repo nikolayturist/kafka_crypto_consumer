@@ -11,8 +11,8 @@ echo "-----------------------------------------------------------"
 
 sudo apt install virtualenv
 
-virtualenv -p /usr/bin/python3 crypto
-source crypto/bin/activate
+virtualenv -p /usr/bin/python3 venv
+source venv/bin/activate
 
 pip install kafka-python
 pip install gcloud
